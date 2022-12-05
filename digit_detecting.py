@@ -18,6 +18,10 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2)
 model = LogisticRegression()
 model.fit(x_train, y_train)
 
-print('target value', digits.target[1700])
-result = model.predict([digits.data[1700]])
-print('test res', result)
+# manual testing
+# print('target value', digits.target[1700])
+# result = model.predict([digits.data[1700]])
+# print('test res', result)
+
+accuracy = model.score(x_test, y_test)
+print('model accuracy', accuracy)
